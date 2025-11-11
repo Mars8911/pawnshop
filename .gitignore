@@ -1,0 +1,33 @@
+# 系統與編譯暫存檔
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Node / 前端專案
+node_modules/
+dist/
+build/
+
+# Laravel / PHP 專案
+/vendor/
+.env
+/storage/
+*.lock
+
+# Cursor / VSCode / IDE 設定
+.cursorrules
+.cursor/
+.vscode/
+.idea/
+
+# 作業系統與其他隱藏檔
+*.swp
+*.swo
+*~
+
+# 不上傳文件或設計圖
+*.psd
+*.ai
+*.pdf
+*.zip
