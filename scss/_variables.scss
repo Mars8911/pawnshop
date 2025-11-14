@@ -308,6 +308,10 @@ $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
 // scss-docs-end theme-color-variables
 
+// === Section: Project Brand Tokens ===
+$brand-navy: #0c66b4;
+$brand-orange: #d44a00;
+
 // scss-docs-start theme-colors-map
 $theme-colors: (
   "primary":    $primary,
@@ -1748,6 +1752,11 @@ $kbd-color:                         var(--#{$prefix}body-bg) !default;
 $kbd-bg:                            var(--#{$prefix}body-color) !default;
 $nested-kbd-font-weight:            null !default; // Deprecated in v5.2.0, removing in v6
 
-$pre-color:                         null !default;
+$pre-color:          
+
+
+null !default;
 
 @import "variables-dark"; // TODO: can be removed safely in v6, only here to avoid breaking changes in v5.3
+
+
