@@ -134,6 +134,58 @@
   }
 }
 
+// === Section: 小導覽 ===
+.c-small-nav {
+  background-color: $white;
+  padding: 0.75rem 0;
+
+  &__container {
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  &__list {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__link {
+    color: $gray-700;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $danger;
+      text-decoration: underline;
+    }
+  }
+
+  &__dot {
+    color: $gray-500;
+    font-size: 0.9375rem;
+  }
+
+  &__divider {
+    color: $gray-400;
+    font-size: 0.9375rem;
+  }
+}
+
 // === Section: 小標橫幅 ===
 .c-subhead-bar {
   background: linear-gradient(180deg, lighten($gray-200, 6%) 0%, $gray-200 100%);
@@ -672,6 +724,234 @@
     color: $gray-700;
     font-size: 0.9375rem;
     font-weight: 500;
+  }
+}
+
+// === Section: 廣告內容區 ===
+.c-ad-wrapper {
+  width: 100%;
+  padding: 1.5rem 1rem;
+
+  &__container {
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 100%;
+  }
+
+  &__title {
+    text-align: center;
+    color: $gray-700;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding: 0.75rem 0;
+    background-color: #F5F5F5;
+
+    @include media-breakpoint-up(md) {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.c-ad-content {
+  width: 100%;
+  border: 1px solid $gray-300;
+  border-radius: $border-radius;
+  background-color: $white;
+
+  @include media-breakpoint-up(md) {
+    padding: 0;
+  }
+
+  &__main-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto 1.5rem;
+
+    @include media-breakpoint-up(md) {
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__button {
+    display: block;
+    flex: 1 1 0;
+    min-width: 0;
+    height: auto;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}
+
+// === Section: 廣告框 ===
+.adbox {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+
+  @include media-breakpoint-up(md) {
+    padding: 1.5rem;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: $gray-600;
+    line-height: 1.6;
+    text-align: start;
+
+    @include media-breakpoint-up(md) {
+      font-size: 0.9375rem;
+    }
+  }
+}
+
+// === Section: 安全借錢警告區塊 ===
+.c-safety-notice {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid $gray-300;
+
+  &__title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $gray-900;
+    margin-bottom: 1rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 1.75rem;
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  &__warning {
+    text-align: center;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: $danger;
+    margin-bottom: 1.5rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__rules {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+  }
+
+  &__rule {
+    flex: 1 1 0;
+    text-align: center;
+  }
+
+  &__rule-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $gray-900;
+    margin-bottom: 0.75rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__rule-text {
+    font-size: 0.875rem;
+    color: $gray-700;
+    line-height: 1.6;
+    margin: 0;
+
+    @include media-breakpoint-up(md) {
+      font-size: 0.9375rem;
+    }
+  }
+}
+
+// === Section: 底部聯繫資訊 ===
+.c-contact-info {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid $gray-300;
+
+  &__main-title {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $gray-900;
+    margin-bottom: 2rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__section {
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__section-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $gray-900;
+    margin-bottom: 1rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  &__text {
+    font-size: 0.875rem;
+    color: $gray-700;
+    line-height: 1.8;
+    margin-bottom: 0.75rem;
+    margin-top: 0;
+
+    @include media-breakpoint-up(md) {
+      font-size: 0.9375rem;
+      margin-bottom: 1rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
