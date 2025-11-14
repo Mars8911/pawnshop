@@ -134,27 +134,145 @@
   }
 }
 
+// === Section: 小標橫幅 ===
+.c-subhead-bar {
+  background: linear-gradient(180deg, lighten($gray-200, 6%) 0%, $gray-200 100%);
+  border: 1px solid $gray-300;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px rgba($black, 0.08);
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+  height: 30px;
+  padding: 0 10px;
+
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &__left {
+    align-items: center;
+    color: $gray-700;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.125rem;
+    font-weight: 600;
+    gap: 0.5rem;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+  }
+
+  &__title {
+    color: $gray-900;
+    font-size: 0.9375rem;
+    font-weight: 700;
+  }
+
+  &__divider {
+    color: $gray-500;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    color: $gray-600;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  &__right {
+    color: $gray-600;
+    font-size: 0.9375rem;
+    letter-spacing: 0.08em;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      text-align: right;
+    }
+  }
+}
+
+// === Section: 區域卡片容器 ===
+.c-region-grid {
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+}
+
 // === Section: 區域導覽大卡 ===
 .region-block {
+  align-items: center;
+  background-color: #cc3300;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  height: 80px;
   text-align: center;
-  padding: 1.5rem 0.5rem;
-  background-color: $secondary;
-  color: #fff;
+  width: 100%;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: space-between;
+    padding: 1.75rem 2rem;
+    text-align: left;
+  }
+
+  .region-title,
+  .region-sub {
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
 
   .region-title {
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
+    font-size: clamp(2rem, 3vw + 0.5rem, 2.75rem);
+    font-weight: 800;
   }
 
   .region-sub {
-    margin-top: 0.25rem;
-    font-size: 1rem;
+    font-size: clamp(1.125rem, 1.5vw + 0.5rem, 1.5rem);
+    font-weight: 600;
   }
 }
 
 // === Section: 小城市按鈕 ===
-.city-row + .city-row {
+.c-city-grid {
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.city-row {
+  --bs-gutter-x: 0;
+  margin: 0;
+}
+
+.city-row > [class*="col-"] {
+  padding: 0;
+}
+
+.city-row > [class*="col-"]:last-child .city-block {
+  border-right: none;
+}
+
+.city-row:last-child .city-block {
+  border-bottom: none;
+}
+
+.city-row+.city-row {
   border-top: 2px solid #fff;
 }
 
@@ -163,17 +281,18 @@
   align-items: center;
   justify-content: center;
   padding: 0.75rem 0;
-  background-color: $primary;
+  background-color:#0080c0;
   color: #fff;
   text-decoration: none;
   font-size: 1.25rem;
   font-weight: 600;
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
+  height: 64px;
 
   &:hover {
-    background-color: darken($primary, 10%);
-    color: #ffff00;
+    background-color: #666;
+    color: #FFC600;
   }
 }
 
