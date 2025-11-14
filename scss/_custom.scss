@@ -535,6 +535,146 @@
   }
 }
 
+// === Section: 注意事項 ===
+.c-notice {
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+
+  &__container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  &__header-line-top,
+  &__header-line-bottom {
+    height: 1px;
+    background-color: $gray-400;
+    width: 100%;
+  }
+
+  &__header-line-top {
+    margin-bottom: 10px;
+  }
+
+  &__header-line-bottom {
+    margin-bottom: 1rem;
+  }
+
+  &__header {
+    text-align: start;
+  }
+
+  &__title {
+    font-size: 15px;
+    font-weight: 700;
+    color: $gray-900;
+    display: inline-block;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: notice-counter;
+  }
+
+  &__item {
+    counter-increment: notice-counter;
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+    color: $gray-900;
+    font-size: 12px;
+    padding-left: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-title {
+    font-weight: 700;
+    
+    &::before {
+      content: counter(notice-counter) "、";
+      font-weight: 700;
+    }
+  }
+
+  &__item-text {
+    font-weight: 400;
+  }
+}
+
+// === Section: 下方訊息 ===
+.c-bottom-info {
+  margin-top: 2rem;
+  padding: 1.5rem 0;
+
+  &__container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $gray-300;
+  }
+
+  &__nav-link {
+    color: $gray-700;
+    text-decoration: none;
+    font-size: 0.9375rem;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $primary;
+      text-decoration: underline;
+    }
+  }
+
+  &__nav-divider {
+    color: $gray-400;
+    font-size: 0.9375rem;
+  }
+
+  &__warning {
+    background-color: #ff6600;
+    color: $white;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.5;
+    border-radius: $border-radius;
+  }
+
+  &__copyright {
+    text-align: center;
+    color: $gray-600;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+
+  &__company {
+    text-align: center;
+    color: $gray-700;
+    font-size: 0.9375rem;
+    font-weight: 500;
+  }
+}
+
 // === Section: RWD 微調 ===
 @include media-breakpoint-down(md) {
   .c-top-header {
@@ -551,6 +691,46 @@
 
     .region-title {
       font-size: 1.5rem;
+    }
+  }
+
+  .c-notice {
+    padding: 1rem 0;
+    margin: 1.5rem 0;
+
+    &__title {
+      font-size: 1.25rem;
+    }
+
+    &__item {
+      font-size: 0.9375rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .c-bottom-info {
+    padding: 1rem 0;
+
+    &__nav {
+      gap: 0.25rem;
+    }
+
+    &__nav-link,
+    &__nav-divider {
+      font-size: 0.875rem;
+    }
+
+    &__warning {
+      font-size: 0.875rem;
+      padding: 0.625rem 0.75rem;
+    }
+
+    &__copyright {
+      font-size: 0.8125rem;
+    }
+
+    &__company {
+      font-size: 0.875rem;
     }
   }
 }
